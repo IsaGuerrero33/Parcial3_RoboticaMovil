@@ -20,7 +20,10 @@ from rclpy.node import Node
 
 # ===== TODO: puntos de SU variante: (x [m], y [m], θ [rad]) =====
 PUNTOS = [
-    # (x, y, theta),
+    (1.0, -1.5, 0.0),
+    (2.0, 0.0, math.pi),
+    (1.0, 1.5, 0.0),
+    (0.0, 0.0, 0.0)
 ]
 
 L1, L2, L3 = 1.0, 1.0, 1.5     # Λ = diag(λ1, λ2, λ3)
@@ -42,12 +45,42 @@ def ley_control(pose, meta):
     pose = (x, y, φ)      meta = (xd, yd, θd)
     Devuelve (u, v, r, alcanzado)
     """
-    # TODO 1: errores de posición (en odom) y de orientación (envuelto)
-    # TODO 2: ¿alcanzado? (TOL_POS y TOL_ANG) -> devolver 0, 0, 0, True
-    # TODO 3: ξ = J(φ)⁺ Λ e
-    # TODO 4: saturar la NORMA de (u, v) a V_MAX conservando la dirección, y |r| a R_MAX
-    raise NotImplementedError
+    x, y, phi = pose
+    xd, yd, thetad = meta
 
+    # 1. Leer la pose y error global
+    ex = xd - x
+    ey = yd - y
+    e_theta = envolver(thetad - phi)
+
+    # 4. Considerar punto alcanzado
+    e_xy = math.hypot(ex, ey)
+    if e_xy < TOL_POS and abs(e_theta) < TOL_ANG:
+        return 0.0, 0.0, 0.0, True
+
+    # 2. J(φ)⁺ Λ (ηd − η) para robot holonómico
+    # Λ (ηd − η): Ganancias por el error global
+    vx_global = L1 * ex
+    vy_global = L2 * ey
+    r = L3 * e_theta
+
+    # J(φ)⁺: Matriz de rotación inversa para obtener velocidades locales (u, v)
+    u = math.cos(phi) * vx_global + math.sin(phi) * vy_global
+    v = -math.sin(phi) * vx_global + math.cos(phi) * vy_global
+
+    # 3. Saturar: la norma de (u, v) <= 0.4 m/s conservando dirección
+    norma_uv = math.hypot(u, v)
+    if norma_uv > V_MAX:
+        u = (u / norma_uv) * V_MAX
+        v = (v / norma_uv) * V_MAX
+
+    # Saturar |r| <= 1.0 rad/s
+    if r > R_MAX:
+        r = R_MAX
+    elif r < -R_MAX:
+        r = -R_MAX
+
+    return float(u), float(v), float(r), False
 
 class IrAPuntos(Node):
     def __init__(self):
