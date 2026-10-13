@@ -1,0 +1,48 @@
+[0.014s] Invoking command in '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum': AMENT_PREFIX_PATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/src/mi_robot_mecanum -DCMAKE_INSTALL_PREFIX=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum
+[2.276s] -- The C compiler identification is GNU 13.3.0
+[3.435s] -- The CXX compiler identification is GNU 13.3.0
+[3.570s] -- Detecting C compiler ABI info
+[3.867s] -- Detecting C compiler ABI info - done
+[3.874s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.874s] -- Detecting C compile features
+[3.889s] -- Detecting C compile features - done
+[3.943s] -- Detecting CXX compiler ABI info
+[4.029s] -- Detecting CXX compiler ABI info - done
+[4.036s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.036s] -- Detecting CXX compile features
+[4.036s] -- Detecting CXX compile features - done
+[4.301s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[4.538s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.952s] -- Configuring done (4.4s)
+[4.958s] -- Generating done (0.0s)
+[4.960s] -- Build files have been written to: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum
+[4.997s] Invoked command in '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum' returned '0': AMENT_PREFIX_PATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/src/mi_robot_mecanum -DCMAKE_INSTALL_PREFIX=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum
+[5.000s] Invoking command in '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum': AMENT_PREFIX_PATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum -- -j8 -l8
+[5.039s] Invoked command in '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum' returned '0': AMENT_PREFIX_PATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum -- -j8 -l8
+[5.047s] Invoking command in '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum': AMENT_PREFIX_PATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum
+[5.054s] -- Install configuration: ""
+[5.054s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/urdf
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/urdf/mi_robot.urdf.xacro
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/worlds
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/worlds/pista.sdf
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/launch
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/launch/sdf_mecanum.py
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/launch/simulacion.launch.py
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/rviz
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/rviz/control.rviz
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/ament_index/resource_index/package_run_dependencies/mi_robot_mecanum
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/ament_index/resource_index/parent_prefix_path/mi_robot_mecanum
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/environment/ament_prefix_path.sh
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/environment/ament_prefix_path.dsv
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/environment/path.sh
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/environment/path.dsv
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/local_setup.bash
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/local_setup.sh
+[5.055s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/local_setup.zsh
+[5.056s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/local_setup.dsv
+[5.056s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/package.dsv
+[5.056s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/ament_index/resource_index/packages/mi_robot_mecanum
+[5.056s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/cmake/mi_robot_mecanumConfig.cmake
+[5.056s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/cmake/mi_robot_mecanumConfig-version.cmake
+[5.056s] -- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_robot_mecanum/share/mi_robot_mecanum/package.xml
+[5.057s] Invoked command in '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum' returned '0': AMENT_PREFIX_PATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/install/mi_mecanum_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/isa-guerrero/ros2_ws_mecanum_estudiantes/build/mi_robot_mecanum
