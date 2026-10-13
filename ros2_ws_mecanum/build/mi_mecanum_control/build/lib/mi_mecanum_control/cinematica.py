@@ -26,9 +26,9 @@ from std_msgs.msg import Float64
 from tf2_ros import TransformBroadcaster
 
 # ===== TODO: parámetros físicos de SU variante (deben coincidir con el xacro) =====
-A_RUEDA = None     # a  : rueda_radio
-LX = None          # lx : distancia_ejes / 2
-LY = None          # ly : separacion_ruedas / 2
+A_RUEDA = 0.045    # a  : rueda_radio
+LX = 0.16          # lx : distancia_ejes / 2
+LY = 0.17          # ly : separacion_ruedas / 2
 
 RUEDAS = ['del_izq', 'del_der', 'tra_izq', 'tra_der']
 JOINTS = [f'joint_rueda_{p}' for p in RUEDAS]
@@ -37,8 +37,14 @@ TOPICOS = [f'/vel_rueda_{p}' for p in RUEDAS]
 
 def matriz_W(a, lx, ly):
     """Cinemática directa del Mecanum: ξ = W ω  (3x4)."""
-    # TODO
-    raise NotImplementedError
+    # Ecuación dada en la imagen del examen
+    l_sum = lx + ly
+    W = (a / 4.0) * np.array([
+        [ 1.0,        1.0,        1.0,        1.0       ],
+        [-1.0,        1.0,        1.0,       -1.0       ],
+        [-1.0/l_sum,  1.0/l_sum, -1.0/l_sum,  1.0/l_sum ]
+    ])
+    return W
 
 
 def envolver(a):
@@ -49,14 +55,23 @@ def envolver(a):
 def integrar(x, y, phi, u, v, r, dt):
     """η̇ = J(φ) ξ e integración de Euler. Devuelve (x, y, φ) con φ en [-π, π]."""
     # TODO: ojo, u y v están en el marco del robot, no en odom
-    raise NotImplementedError
+    dot_x = u * math.cos(phi) - v * math.sin(phi)
+    dot_y = u * math.sin(phi) + v * math.cos(phi)
+    
+    # Integración por Euler
+    x_nuevo = x + (dot_x * dt)
+    y_nuevo = y + (dot_y * dt)
+    phi_nuevo = envolver(phi + (r * dt))
+    
+    return x_nuevo, y_nuevo, phi_nuevo
+    
 
 
 class Cinematica(Node):
     def __init__(self):
         super().__init__('cinematica')
         self.W = matriz_W(A_RUEDA, LX, LY)
-        self.W_pinv = None   # TODO: ω = W⁺ ξ
+        self.W_pinv = np.linalg.pinv(self.W)   # TODO: ω = W⁺ ξ
 
         # Inversa
         self.create_subscription(Twist, '/cmd_vel', self.cb_cmd_vel, 10)
@@ -75,8 +90,17 @@ class Cinematica(Node):
 
     # ---------- Cinemática inversa: ω = W⁺ ξ ----------
     def cb_cmd_vel(self, msg):
-        # TODO: armar ξ desde msg, calcular ω y publicar cada ω en su publisher (Float64)
-        pass
+        # Armar vector de velocidades del chasis (ξ)
+        xi = np.array([msg.linear.x, msg.linear.y, msg.angular.z])
+        
+        # Calcular velocidades de las ruedas (ω)
+        omega = np.dot(self.W_pinv, xi)
+        
+        # Publicar cada ω a su respectivo motor
+        for i in range(4):
+            vel_msg = Float64()
+            vel_msg.data = omega[i]
+            self.pubs[i].publish(vel_msg)
 
     # ---------- Cinemática directa: ξ = W ω, y odometría ----------
     def cb_joints(self, msg):
@@ -96,7 +120,11 @@ class Cinematica(Node):
             return
 
         # TODO: calcular u, v, r con W y actualizar self.x, self.y, self.phi
-        u = v = r = 0.0
+        xi = np.dot(self.W, omega)
+        u, v, r = xi[0], xi[1], xi[2]
+        
+        # Actualizar x, y, phi usando la función de integración
+        self.x, self.y, self.phi = integrar(self.x, self.y, self.phi, u, v, r, dt)
 
         qz, qw = math.sin(self.phi / 2.0), math.cos(self.phi / 2.0)
         stamp = ahora.to_msg()
@@ -106,6 +134,22 @@ class Cinematica(Node):
         odom.header.frame_id = 'odom'
         odom.child_frame_id = 'base_link'
         # TODO: llenar odom.pose.pose (posición y orientación) y odom.twist.twist (u, v, r)
+        # Posición
+        odom.pose.pose.position.x = self.x
+        odom.pose.pose.position.y = self.y
+        odom.pose.pose.position.z = 0.0
+        
+        # Orientación
+        odom.pose.pose.orientation.x = 0.0
+        odom.pose.pose.orientation.y = 0.0
+        odom.pose.pose.orientation.z = qz
+        odom.pose.pose.orientation.w = qw
+        
+        # Velocidades locales
+        odom.twist.twist.linear.x = float(u)
+        odom.twist.twist.linear.y = float(v)
+        odom.twist.twist.angular.z = float(r)
+        
         self.pub_odom.publish(odom)
 
         t = TransformStamped()

@@ -1,0 +1,25 @@
+[0.635s] Invoking command in '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/src/mi_mecanum_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_mecanum_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_mecanum_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mi_mecanum_control build --build-base /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_mecanum_control/build install --record /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_mecanum_control/install.log --install-scripts $base/lib/mi_mecanum_control --single-version-externally-managed install_data
+[0.840s] running egg_info
+[0.856s] writing ../../build/mi_mecanum_control/mi_mecanum_control.egg-info/PKG-INFO
+[0.856s] writing dependency_links to ../../build/mi_mecanum_control/mi_mecanum_control.egg-info/dependency_links.txt
+[0.857s] writing entry points to ../../build/mi_mecanum_control/mi_mecanum_control.egg-info/entry_points.txt
+[0.857s] writing requirements to ../../build/mi_mecanum_control/mi_mecanum_control.egg-info/requires.txt
+[0.857s] writing top-level names to ../../build/mi_mecanum_control/mi_mecanum_control.egg-info/top_level.txt
+[0.889s] reading manifest file '../../build/mi_mecanum_control/mi_mecanum_control.egg-info/SOURCES.txt'
+[0.889s] writing manifest file '../../build/mi_mecanum_control/mi_mecanum_control.egg-info/SOURCES.txt'
+[0.889s] running build
+[0.889s] running build_py
+[0.890s] copying mi_mecanum_control/cinematica.py -> /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_mecanum_control/build/lib/mi_mecanum_control
+[0.890s] running install
+[0.894s] running install_lib
+[0.911s] copying /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_mecanum_control/build/lib/mi_mecanum_control/cinematica.py -> /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_mecanum_control/lib/python3.12/site-packages/mi_mecanum_control
+[0.911s] byte-compiling /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_mecanum_control/lib/python3.12/site-packages/mi_mecanum_control/cinematica.py to cinematica.cpython-312.pyc
+[0.913s] running install_data
+[0.913s] running install_egg_info
+[0.930s] removing '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_mecanum_control/lib/python3.12/site-packages/mi_mecanum_control-1.0.0-py3.12.egg-info' (and everything under it)
+[0.930s] Copying ../../build/mi_mecanum_control/mi_mecanum_control.egg-info to /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_mecanum_control/lib/python3.12/site-packages/mi_mecanum_control-1.0.0-py3.12.egg-info
+[0.931s] running install_scripts
+[1.034s] Installing cinematica script to /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_mecanum_control/lib/mi_mecanum_control
+[1.035s] Installing ir_a_puntos script to /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_mecanum_control/lib/mi_mecanum_control
+[1.035s] writing list of installed files to '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_mecanum_control/install.log'
+[1.061s] Invoked command in '/home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/src/mi_mecanum_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_mecanum_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_mecanum_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mi_mecanum_control build --build-base /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_mecanum_control/build install --record /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_mecanum_control/install.log --install-scripts $base/lib/mi_mecanum_control --single-version-externally-managed install_data
