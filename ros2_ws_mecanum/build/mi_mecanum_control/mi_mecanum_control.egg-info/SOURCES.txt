@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+../../build/mi_mecanum_control/mi_mecanum_control.egg-info/PKG-INFO
+../../build/mi_mecanum_control/mi_mecanum_control.egg-info/SOURCES.txt
+../../build/mi_mecanum_control/mi_mecanum_control.egg-info/dependency_links.txt
+../../build/mi_mecanum_control/mi_mecanum_control.egg-info/entry_points.txt
+../../build/mi_mecanum_control/mi_mecanum_control.egg-info/requires.txt
+../../build/mi_mecanum_control/mi_mecanum_control.egg-info/top_level.txt
+../../build/mi_mecanum_control/mi_mecanum_control.egg-info/zip-safe
+mi_mecanum_control/__init__.py
+mi_mecanum_control/cinematica.py
+mi_mecanum_control/ir_a_puntos.py
+resource/mi_mecanum_control

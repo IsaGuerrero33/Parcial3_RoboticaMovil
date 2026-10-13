@@ -1,0 +1,42 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/build/mi_robot_mecanum
+-- Install configuration: ""
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/urdf
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/urdf/mi_robot.urdf.xacro
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/worlds
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/worlds/pista.sdf
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/launch
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/launch/sdf_mecanum.py
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/launch/simulacion.launch.py
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/rviz
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/rviz/control.rviz
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/ament_index/resource_index/package_run_dependencies/mi_robot_mecanum
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/ament_index/resource_index/parent_prefix_path/mi_robot_mecanum
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/environment/ament_prefix_path.sh
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/environment/ament_prefix_path.dsv
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/environment/path.sh
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/environment/path.dsv
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/local_setup.bash
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/local_setup.sh
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/local_setup.zsh
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/local_setup.dsv
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/package.dsv
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/ament_index/resource_index/packages/mi_robot_mecanum
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/cmake/mi_robot_mecanumConfig.cmake
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/cmake/mi_robot_mecanumConfig-version.cmake
+-- Installing: /home/isa-guerrero/ros2_ws_mecanum_estudiantes/ros2_ws_mecanum/install/mi_robot_mecanum/share/mi_robot_mecanum/package.xml
